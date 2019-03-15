@@ -27,7 +27,7 @@ pip3 install -r requirements.txt
  
  ```python
  
- # #from the directory '.../Test/'
+ #from the directory '.../Test/'
  
  python test.py
  ```
