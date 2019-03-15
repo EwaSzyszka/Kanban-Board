@@ -1,4 +1,4 @@
-# Kanban-Board
+# Kanban-Board 📋
 
 This is a project made as a part of CS162 class in Python, using Flsk framework. It is an implementation of a Kanban Board with three sections "To do", "Doing" and "Done". 
 
@@ -23,5 +23,12 @@ pip3 install -r requirements.txt
  #Then go to --> http://127.0.0.1:5000/ <--
  ```
  
+ ## Running the unit tests 📝
  
+ ```python
+ 
+ # #from the directory '.../Test/'
+ 
+ python test.py
+ ```
   
