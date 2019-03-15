@@ -13,9 +13,12 @@ source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-
- from the directory '.../Test/'
- 
+##Running the app from the directory '.../Test/'
+```python
  python app.py
  
- Go to http://127.0.0.1:5000/
+ #Then go to http://127.0.0.1:5000/
+ ```
+ 
+ 
+  
