@@ -1,7 +1,8 @@
 # Kanban-Board
 
-Virtual Environment 
 
+
+## Virtual Environment setup :U+1F4BB:
 
 python3.6 -m venv .venv
 source .venv/bin/activate
