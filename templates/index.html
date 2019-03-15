@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+    {%block body %}
+    <br></br>
+
+      <div class="jumbotron text-center">
+        <h1>Welcome to the KanbanApp</h1>
+        <p class='lead'>Organize your tasks now!</p>
+      </div>
+
+
+
+<p align="center">Do you have any task pending? </p>
+    <div>
+      <form align="center" action='/add' method ='POST'>
+        <input type='text' name = 'todoitem'>
+        <input type='submit' value='add item'>
+      </form>
+    </div>
+
+    <div>
+      <h1>Incomplete Items</h1>
+<div class="column" style="background-color:#f47641;">
+
+
+      <ul>
+        {% for todo in incomplete %}
+        <li style='font-size: 30 pt'>{{todo.text}}<a href="{{url_for('asinprogress', id=todo.id)}}"><button type="button" class="btn"><i class="fa fa-close "></i></button></a></li>
+        {% endfor %}
+      </ul>
+</div>
+
+
+
+
+  <h1>In Progress</h1>
+<div class="column" style="background-color:#f4d941;">
+
+      <ul>
+        {% for todo in inprogress %}
+        <li style='font-size: 30 pt'>{{todo.text}}<a href="{{url_for('ascomplete', id=todo.id)}}"><button type="button" class="btn"><i class="fa fa-spinner fa-spin"></i></button></a></li>
+        {% endfor %}
+      </ul>
+</div>
+    </div>
+
+
+    <h1>Complete</h1>
+      <div class="column" style="background-color: #a1f442;">
+
+
+<ul>
+         <form action='/delete' method='POST'>
+        {% for todo in complete %}
+
+        <li style='font-size: 30 pt'>{{todo.text}}<a href="{{url_for('delete', id=todo.id)}}"><input type="submit" name="{{todo.id}}" class="submitting" class="fa fa-close" value="&#10003"></a></li>
+
+        {% endfor %}
+        </form>
+        </ul>
+    </div>
+
+
+
+
+
+{%endblock%}
